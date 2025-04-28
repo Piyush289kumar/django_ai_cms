@@ -4,18 +4,21 @@
     <div class="container">
         <div class="tp-about-titlebox mb-50">
             <h1 class="tp-section-title text-white">
-                A GLOBAL, <span class="body-text">AGENCY-LED BRAND DESIGN AGENCY</span>
+                <!-- A GLOBAL, <span class="body-text">AGENCY-LED BRAND DESIGN AGENCY</span> -->
+                 {{ about_section.title }}
             </h1>
         </div>
         <div class="tp-about-thumb w-100 mb-85 wow tp_clip_down" data-wow-duration="2.5s">
-            <img src="{% static 'assets/img/about/about1-img.jpg' %}" alt="">
+            <img src="{{ about_section.image.url }}" alt="About Image">
+
         </div>
         <div class="tp-about-content">
             <div class="row">
                 <div class="col-lg-7 col-xl-7">
                     <div class="tp-about-titlebox mb-15">
                         <h1 class="tp-section-title">
-                            Drawing <span class="light-text">inspiration</span> from brand & Narratives
+                            <!-- Drawing <span class="light-text">inspiration</span> from brand & Narratives -->
+                            {{ about_section.subtitle }}
                             <span class="tp-title-shape wow tp_clip_right" data-wow-duration="2.5s">
                                 <svg width="253" height="17" viewBox="0 0 253 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -51,9 +54,11 @@
                             </div>
                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-7">
                                 <div class="tp-about-text">
-                                    <p class="text-white">We design bold and elegant identities<br> with a <span
+                                    <p class="text-white">
+                                        <!-- We design bold and elegant identities<br> with a <span
                                             class="body-text">Modern touch</span> for your business<br> needs, achieve
-                                        results with our latest<br> and proven formulas</p>
+                                        results with our latest<br> and proven formulas</p> -->
+                                        {{ about_section.description}}
                                 </div>
                             </div>
                         </div>
