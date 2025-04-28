@@ -19,10 +19,12 @@ from django.urls import path
 from home_content.views import home  # 👈 import your view
 from django.conf import settings
 from django.conf.urls.static import static
+from home_content import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # 👈 use view, not TemplateView
+    path('contact-submit/', views.contact_submit, name='contact_submit'),
 ]
 
 if settings.DEBUG:

@@ -8,15 +8,15 @@
                         <div class="tp-footer__widget footer-col-2-1 mb-40 wow tpfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".3s">
                             <div class="tp-footer__adress-box p-relative">
-                                <h3 class="tp-footer__adress">ADDRESS</h3>
+                                <!-- <h3 class="tp-footer__adress">ADDRESS</h3> -->
                                 <a href="https://maps.app.goo.gl/5jjAGwaDreeCBemr5" class="tp-footer__city">
-                                    5919 TrussvilleCrossings Pkwy, Birmi
+                                    {{ app_setting.app_name }}
                                 </a>
                                 <h3 class="tp-footer__contact">
-                                    <a href="tel:24563432445">+2 456 (343) 24 45</a>
+                                    <a href="tel:24563432445">+91 {{ app_setting.phone }}</a>
                                 </h3>
                                 <a href="https://maps.app.goo.gl/5jjAGwaDreeCBemr5" class="tp-footer__location">
-                                    27 Division, New York, NY 1002
+                                    {{ app_setting.address }}
                                 </a>
                             </div>
                         </div>
@@ -24,20 +24,20 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                         <div class="tp-footer__widget footer-col-2-2 mb-40 wow tpfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".5s">
-                            <h3 class="tp-footer__widget-title">SERVICES REQ</h3>
+                            <!-- <h3 class="tp-footer__widget-title">SERVICES REQ</h3>
                             <div class="tp-footer__list">
                                 <a href="#">UI/UX Experience</a>
                                 <a href="#">Digital Marketing</a>
                                 <a href="#">Web Development</a>
                                 <a href="#">Product Design</a>
                                 <a href="#">Web Development</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
                         <div class="tp-footer__widget footer-col-2-3 mb-40 wow tpfadeUp" data-wow-duration=".9s"
                             data-wow-delay=".7s">
-                            <h3 class="tp-footer__widget-title">FIND IT FAST</h3>
+                            <!-- <h3 class="tp-footer__widget-title">FIND IT FAST</h3>
                             <div class="tp-footer__contact-info">
                                 <div class="tp-footer__list">
                                     <a href="#about-sec">About Us</a>
@@ -45,25 +45,25 @@
                                     <a href="team.html">Our Team</a>
                                     <a href="">Blog Insights</a>
                                     <a href="contact.html">Contact</a>
-                                </div>
-                            </div>
+                                </div> -->
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                        <div class="tp-footer__widget footer-col-2-4 wow tpfadeUp" data-wow-duration=".9s"
-                            data-wow-delay=".9s">
-                            <h3 class="tp-footer__widget-title">SERVICES REQ</h3>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                    <div class="tp-footer__widget footer-col-2-4 wow tpfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".9s">
+                        <!-- <h3 class="tp-footer__widget-title">SERVICES REQ</h3>
                             <div class="tp-footer__list">
                                 <a href="#">Faqs</a>
                                 <a href="#">Term & Conditions</a>
                                 <a href="#">Privacy policy</a>
                                 <a href="">Support center</a>
                                 <a href="#">Help</a>
-                            </div>
-                        </div>
+                            </div> -->
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <!-- tp copyright area start -->
         <div class="tp-copyright-area tp-copyright__style-2 pt-30 pb-10 wow tpfadeUp" data-wow-duration=".9s"
@@ -74,23 +74,37 @@
                         <div
                             class="col-xl-2 col-lg-2 col-md-6 col-sm-6 order-xl-1 order-lg-1 order-md-0 order-sm-0 order-0">
                             <div class="tp-copyright__logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="">
+                                <a href="#">
+                                    <img src="{{ app_setting.preloader_logo.url }}" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 order-xl-2 order-md-3 order-sm-3 order-lg-2 order-3">
                             <div class="tp-copyright__text text-sm-center">
-                                <p> <span>©2025</span> Oclata by design. All Rights Reserved</p>
+                                <p> <span>©2025</span> All Rights Reserved</p>
                             </div>
                         </div>
                         <div
                             class="col-xl-2 col-lg-3 col-md-6 col-sm-6 order-xl-3 order-lg-3 order-md-1 order-sm-1 order-1">
                             <div class="tp-copyright__social text-sm-end">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                {% if app_setting %}
+                                {% if app_setting.facebook_link %}
+                                <a href="{{ app_setting.facebook_link }}" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                {% endif %}
+                                {% if app_setting.instagram_link %}
+                                <a href="{{ app_setting.instagram_link }}" target="_blank"><i
+                                        class="fab fa-vimeo-v"></i></a>
+                                {% endif %}
+                                {% if app_setting.twitter_link %}
+                                <a href="{{ app_setting.twitter_link }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                {% endif %}
+                                {% if app_setting.linkedin_link %}
+                                <a href="{{ app_setting.linkedin_link }}" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                {% endif %}
+                                {% endif %}
+
                             </div>
                         </div>
                     </div>

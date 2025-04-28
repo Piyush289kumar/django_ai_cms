@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutSection, Portfolio, Team, Testimonial
+from .models import AboutSection, Portfolio, Team, Testimonial, Contact, AppSettings
 
 @admin.register(AboutSection)
 class AboutSectionAdmin(admin.ModelAdmin):
@@ -19,3 +19,12 @@ class TeamAdmin(admin.ModelAdmin):
 class Testimonialdmin(admin.ModelAdmin):
     list_display = ('title', 'description')  # You can adjust what you want to display in the admin panel
 
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'email', 'phone', 'created_at')
+    search_fields = ('first_name', 'last_name', 'email', 'phone')
+    list_filter = ('created_at',)
+
+@admin.register(AppSettings)
+class AppSettingsAdmin(admin.ModelAdmin):
+    list_display = ('app_name', 'email', 'phone')

@@ -57,41 +57,51 @@
                 <div class="tp-contact__form ml-80 mb-30 mt-30 wow fadeInRight" data-wow-delay=".3s"
                     data-wow-duration="1s"
                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInRight;">
-                    <form id="contact-form" action="{% static 'assets/mail.php" method' %}="POST">
+                    <form id="contact-form" method="POST" action="{% url 'contact_submit' %}">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="tp-contact__input">
-                                    <input name="name" type="text" placeholder="First Name">
+                                    <input name="first_name" type="text" placeholder="First Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tp-contact__input">
-                                    <input name="l_name" type="text" placeholder="Last Name">
+                                    <input name="last_name" type="text" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tp-contact__input">
-                                    <input name="email" type="email" placeholder="Email">
+                                    <input name="email" type="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tp-contact__input">
-                                    <input name="phone" type="text" placeholder="Phone">
+                                    <input name="phone" type="text" placeholder="Phone" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="tp-contact__input">
-                                    <textarea name="message" placeholder="Enter Message"></textarea>
+                                    <textarea name="message" placeholder="Enter Message" required></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="tp-contact__btn">
-                                    <button type="submit"> Send Message</button>
+                                    <button type="submit">Send Message</button>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <p class="ajax-response"></p>
+
+                    <!-- Success message here -->
+                    <!-- <p class="ajax-response">
+                        {% if messages %}
+                        {% for message in messages %}
+                        {{ message }}
+                        {% endfor %}
+                        {% endif %}
+                    </p> -->
+
                 </div>
             </div>
         </div>
