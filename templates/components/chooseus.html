@@ -1,11 +1,11 @@
-
+{% load static %}
 
 <!-- tp choose us area start -->
 <section class="tp-chooseus__area fix tp-chooseus__1 p-relative section-bg d-flex align-items-center">
     <div class="tp-chooseus__bg-thumb d-none d-xl-block wow tp_clip_right"
-        data-background="assets/img/chooseus/chooseus-thumb-1-1.jpg" data-wow-delay=".3s" data-wow-duration="2.5s">
+        data-background="{% static 'assets/img/chooseus/chooseus-thumb-1-1.jpg" data-wow-delay=".3s" data-wow-duratio' %}n="2.5s">
         <div class="tp-chooseus__icon">
-            <a href="contact.html">
+            <a href="#contactus">
                 <span>
                     <svg width="229" height="229" viewBox="0 0 229 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 224L211.25 17.75M5 4H225V224" stroke="currentColor" stroke-width="6.5"
@@ -76,7 +76,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="tp-choose-us-btn">
-                                <a href="contact.html" class="tp-btn-primary tp-btn-switch-text">
+                                <a href="#contactus" class="tp-btn-primary tp-btn-switch-text">
                                     <span class="btn-double-text" data-text="Explore More">Explore More </span>
                                     <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
                                 </a>
@@ -110,7 +110,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="tp-working__process wow tpfadeUp mb-40" data-wow-delay=".3s" data-wow-duration="1.5s">
                     <div class="tp-working-process__icon">
-                        <img src="assets/img/working-process/icon-1.png" alt="">
+                        <img src="{% static 'assets/img/working-process/icon-1.png' %}" alt="">
                     </div>
                     <div class="tp-working__text">
                         <h4> Branding </h4>
@@ -121,7 +121,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="tp-working__process wow tpfadeUp mb-40" data-wow-delay=".6s" data-wow-duration="1.5s">
                     <div class="tp-working-process__icon">
-                        <img src="assets/img/working-process/icon-2.png" alt="">
+                        <img src="{% static 'assets/img/working-process/icon-2.png' %}" alt="">
                     </div>
                     <div class="tp-working__text">
                         <h4> Optimum </h4>
@@ -132,7 +132,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="tp-working__process wow tpfadeUp mb-40" data-wow-delay=".9s" data-wow-duration="1.5s">
                     <div class="tp-working-process__icon">
-                        <img src="assets/img/working-process/icon-3.png" alt="">
+                        <img src="{% static 'assets/img/working-process/icon-3.png' %}" alt="">
                     </div>
                     <div class="tp-working__text">
                         <h4> Thinking </h4>
@@ -143,7 +143,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="tp-working__process wow tpfadeUp mb-40" data-wow-delay="1.3s" data-wow-duration="1.5s">
                     <div class="tp-working-process__icon">
-                        <img src="assets/img/working-process/icon-4.png" alt="">
+                        <img src="{% static 'assets/img/working-process/icon-4.png' %}" alt="">
                     </div>
                     <div class="tp-working__text">
                         <h4> Execution </h4>

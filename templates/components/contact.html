@@ -1,3 +1,4 @@
+{% load static %}
 <!-- tp contact area start -->
 <section class="tp-contact-area p-relative pt-70 z-index-2" id="contactus">
     <div class="contact-object-1"> </div>
@@ -18,7 +19,7 @@
                         <div class="tp-contact-list-item d-flex align-items-center mb-25">
                             <div class="tp-contact-list-icon">
                                 <span>
-                                    <img src="assets/img/icon/call-2.png" alt="">
+                                    <img src="{% static 'assets/img/icon/call-2.png' %}" alt="">
                                 </span>
                             </div>
                             <div class="tp-contact-list-content">
@@ -29,7 +30,7 @@
                         <div class="tp-contact-list-item d-flex align-items-center mb-25">
                             <div class="tp-contact-list-icon">
                                 <span>
-                                    <img src="assets/img/icon/email-2.png" alt="">
+                                    <img src="{% static 'assets/img/icon/email-2.png' %}" alt="">
                                 </span>
                             </div>
                             <div class="tp-contact-list-content">
@@ -40,7 +41,7 @@
                         <div class="tp-contact-list-item d-flex align-items-center mb-25">
                             <div class="tp-contact-list-icon">
                                 <span>
-                                    <img src="assets/img/icon/location-2.png" alt="">
+                                    <img src="{% static 'assets/img/icon/location-2.png' %}" alt="">
                                 </span>
                             </div>
                             <div class="tp-contact-list-content">
@@ -56,7 +57,7 @@
                 <div class="tp-contact__form ml-80 mb-30 mt-30 wow fadeInRight" data-wow-delay=".3s"
                     data-wow-duration="1s"
                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInRight;">
-                    <form id="contact-form" action="assets/mail.php" method="POST">
+                    <form id="contact-form" action="{% static 'assets/mail.php" method' %}="POST">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="tp-contact__input">
