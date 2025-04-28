@@ -28,3 +28,12 @@ class Team(models.Model):
 
     def __str__(self):
         return self.title or "No title"  # Display the title if it exists
+
+
+class Testimonial(models.Model):
+    image = models.ImageField(upload_to='testimonial/')  # Save images under 'team/' folder    
+    title = models.CharField(max_length=255, blank=True, null=True)  # Optional title for each team member    
+    description = models.TextField(blank=True, null=True)  # Optional description of the team member
+
+    def __str__(self):
+        return self.title or "No title"  # Display the title if it exists

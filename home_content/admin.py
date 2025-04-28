@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutSection, Portfolio, Team
+from .models import AboutSection, Portfolio, Team, Testimonial
 
 @admin.register(AboutSection)
 class AboutSectionAdmin(admin.ModelAdmin):
@@ -13,5 +13,9 @@ class PortfolioAdmin(admin.ModelAdmin):
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ('title', 'url')  # You can adjust what you want to display in the admin panel
+    list_display = ('title', 'description')  # You can adjust what you want to display in the admin panel
+
+@admin.register(Testimonial)
+class Testimonialdmin(admin.ModelAdmin):
+    list_display = ('title', 'description')  # You can adjust what you want to display in the admin panel
 

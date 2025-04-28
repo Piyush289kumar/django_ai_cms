@@ -25,23 +25,27 @@
         <div class="tp-testimonial-wrapper fix">
             <div class="swiper-container tp-testi-active">
                 <div class="swiper-wrapper">
+                    
+                    
+                    {% for testimonial in testimonials %}
                     <div class="swiper-slide">
                         <div class="tp-testimonial-item">
-                            <p class="tp-testimonial-dsc mb-50">At our creative agency, we embrace the power of
-                                imagination and innovation. We continually challenge the limits of possibility, aiming
-                                to produce work that is not only beautiful At our creative agency, we embrace</p>
+                            <p class="tp-testimonial-dsc mb-50">{{testimonial.description}}</p>
                             <div class="tp-testimonial-authorbox d-flex align-items-center">
                                 <div class="tp-testimonial-author">
                                     <img src="{% static 'assets/img/testi/testi-1-1.png' %}" alt="">
                                 </div>
                                 <div class="tp-testimonial-author-content">
-                                    <h5 class="tp-testimonial-author-title">James N. Johnson</h5>
-                                    <span class="tp-testimonial-author-disgnation">CEO & Founder</span>
+                                    <h5 class="tp-testimonial-author-title">{{testimonial.title}}</h5>
+                                    <!-- <span class="tp-testimonial-author-disgnation"></span> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    {% endfor %}
+
+
+                    <!-- <div class="swiper-slide">
                         <div class="tp-testimonial-item">
                             <p class="tp-testimonial-dsc mb-50">At our creative agency, we embrace the power of
                                 imagination and innovation. We continually challenge the limits of possibility, aiming
@@ -72,7 +76,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="tp-pagination-arrow mt-50 text-center">
