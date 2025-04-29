@@ -14,6 +14,9 @@ class PortfolioAdmin(admin.ModelAdmin):
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('title', 'description')  # You can adjust what you want to display in the admin panel
+    
+    # Use custom change form template
+    change_form_template = 'admin/custom_team_change_form.html'
 
 @admin.register(Testimonial)
 class Testimonialdmin(admin.ModelAdmin):
