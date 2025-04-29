@@ -25,6 +25,9 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ('first_name', 'last_name', 'email', 'phone')
     list_filter = ('created_at',)
 
+     # Use custom change form template
+    change_form_template = 'admin/custom_contact_change_form.html'
+
 @admin.register(AppSettings)
 class AppSettingsAdmin(admin.ModelAdmin):
     list_display = ('app_name', 'email', 'phone')
